@@ -38,7 +38,8 @@ public class UsuarioDao {
 		String consulta = "SELECT ID, CORREO, CONTRASENIA, NOMBRE, ANIONACIMIENTO FROM USUARIO WHERE ID = " + id;
 		try (Connection conexion = manejaConexion.obtenerConexion();
 				PreparedStatement ps = conexion.prepareStatement(consulta);
-				ResultSet rs = ps.executeQuery();) {
+				ResultSet rs = ps.executeQuery();
+				) {
 			if (rs.next()) {
 				usuario.setId(rs.getInt("id"));
 				usuario.setCorreo(rs.getString("correo"));
