@@ -83,7 +83,7 @@ public class UsuarioDao {
 
 	public int ingresar(Usuario usuario) {
 		int filasAfectadas = 0;
-		String consulta = "INSERT INTO USUARIO (CORREO, CONTRASENIA, NOMBRE, ANIONACIMIENTO) VALUES(?, ?, ?, 0)";
+		String consulta = "INSERT INTO USUARIO (CORREO, CONTRASENIA, NOMBRE, ANIONACIMIENTO) VALUES(?, ?, ?, ?)";
 
 		try (Connection conexion = manejaConexion.obtenerConexion();
 				PreparedStatement ps = conexion.prepareStatement(consulta);) {

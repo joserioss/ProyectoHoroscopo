@@ -55,7 +55,7 @@ public class UsuarioDto {
 	@Override
 	public String toString() {
 		return "UsuarioDto [codigo=" + codigo + ", correo=" + correo + ", contrasenia=" + contrasenia + ", nombre="
-				+ nombre + ", anioNacimiento=" + anioNacimiento + "]";
+				+ nombre + ", anioNacimiento=" + anioNacimiento + "] \n";
 	}
 
 }

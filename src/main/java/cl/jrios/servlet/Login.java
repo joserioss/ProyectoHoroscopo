@@ -24,7 +24,7 @@ public class Login extends HttpServlet {
 
 	private static final Logger LOG = Logger.getLogger(Login.class.getName());
 
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String requestLogin = "";
 		String requestPass = "";
 		
@@ -52,7 +52,7 @@ public class Login extends HttpServlet {
 		if(usuarioOk && passwordOk) {
 			HttpSession sesionUsuario = req.getSession(true);
 			sesionUsuario.setAttribute("NombreLogin", requestLogin);
-			RequestDispatcher rd = req.getRequestDispatcher("ingresaClave.jsp");
+			RequestDispatcher rd = req.getRequestDispatcher("Principal.jsp");
 			rd.forward(req, resp);
 		}
 //		De ser incorrecto aparece una ventana modal que indica el error		

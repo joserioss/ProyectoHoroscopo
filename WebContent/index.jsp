@@ -34,24 +34,36 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
 	integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 	crossorigin="anonymous"></script>
-
 </head>
 <body>
-	<div class="wrapper fadeInDown">
-		<div id="formContent">
-			<form action="login" method="GET">
-				<input type="text" id="login" class="fadeIn second" name="login"
-					placeholder="correo electronico"> <input type="password"
-					id="password" class="fadeIn second" name="pass"
-					placeholder="password"> <input type="submit"
-					class="fadeIn fourth" value="Log In">
-			</form>
 
-			<div id="formFooter">
-				<a class="underlineHover" href="#">Olvido la clave?</a>
+	<div class="container">
+		<div class="row my-5">
+			<div class="col-4"></div>
+			<div class="row-4">
+				<div class="wrapper fadeInDown">
+					<div id="formContent">
+					<h1>Ingresar al sistema</h1>
+						<form action="login" method="POST">
+							<input type="text" id="login" class="fadeIn second" name="login"
+								placeholder="correo electronico"> <input type="password"
+								id="password" class="fadeIn second" name="pass"
+								placeholder="password"> <input type="submit"
+								class="fadeIn fourth" value="Log In">
+						</form>
+
+						<div id="formFooter">
+							<a class="underlineHover" href="Registrar.jsp">Registrate
+								aquí</a>
+						</div>
+
+					</div>
+				</div>
+
 			</div>
-
+			<div class="row-4"></div>
 		</div>
+
 	</div>
 
 
@@ -151,5 +163,6 @@
 	<%
 		}
 	%>
+
 </body>
 </html>

@@ -37,6 +37,7 @@ public class UsuarioFacade {
 		usuario.setCorreo(usuariodto.getCorreo());
 		usuario.setContrasenia(usuariodto.getContrasenia());
 		usuario.setNombre(usuariodto.getNombre());
+		usuario.setAnioNacimiento(usuariodto.getAnioNacimiento());
 		
 		return daoUsuario.ingresar(usuario);
 	}
